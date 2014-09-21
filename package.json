@@ -1,0 +1,65 @@
+{
+    "name": "r-pi-brick",
+    "version": "0.0.0",
+    "description": "A Node.js API for the BrickPi.",
+    "keywords": [
+        "brickpi",
+        "raspberry",
+        "pi",
+        "lego",
+        "mindstorms",
+        "ev3"
+    ],
+    "author": {
+        "name": "Clemens Akens",
+        "email": "clebert@me.com",
+        "url": "http://clebert.com/"
+    },
+    "bugs": {
+        "url": "https://github.com/clebert/r-pi-brick/issues"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "inceptionYear": 2014,
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.githubusercontent.com/clebert/r-pi-brick/master/LICENSE"
+        }
+    ],
+    "main": "lib/brick.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/clebert/r-pi-brick.git"
+    },
+    "config": {
+        "blanket": {
+            "data-cover-only": "lib/",
+            "data-cover-never": "node_modules/"
+        },
+        "mocha-cov-reporter": {
+            "failOnError": true,
+            "threshold": 100,
+            "useColors": true
+        }
+    },
+    "scripts": {
+        "test": "node_modules/.bin/grunt"
+    },
+    "dependencies": {
+        "es6-promise": "~1.0.0",
+        "serialport": "~1.4.6",
+        "typesystem": "~1.2.1"
+    },
+    "devDependencies": {
+        "extended-assert": "~1.4.0",
+        "grunt": "~0.4.5",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-bumpup": "~0.6.1",
+        "grunt-cli": "~0.1.13",
+        "grunt-mocha-cov": "~0.3.0",
+        "grunt-module": "~1.0.0",
+        "mocha-cov-reporter": "~1.0.0"
+    }
+}
