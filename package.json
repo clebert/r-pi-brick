@@ -1,6 +1,6 @@
 {
     "name": "r-pi-brick",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "A Node.js API for the BrickPi.",
     "keywords": [
         "brickpi",
