@@ -30,8 +30,8 @@ var brick = require('r-pi-brick');
 
 ### Overview
 
-- [brick.initAsync([timeout])](#brickinitasynctimeout)
-- [brick.updateAsync([maxRetries])](#brickupdateasyncmaxretries)
+- [brick.init([timeout])](#brickinittimeout)
+- [brick.update([maxRetries])](#brickupdatemaxretries)
 - [brick.isMotorEnabled(port)](#brickismotorenabledport)
 - [brick.setMotorEnabled(enabled, port)](#bricksetmotorenabledenabled-port)
 - [brick.getMotorPosition(port)](#brickgetmotorpositionport)
@@ -43,18 +43,18 @@ var brick = require('r-pi-brick');
 - [brick.MOTOR_PORT_C](#brickmotor_port_c)
 - [brick.MOTOR_PORT_D](#brickmotor_port_d)
 
-### brick.initAsync([timeout])
+### brick.init([timeout])
 
 Initializes the serial connection to the [BrickPi](http://www.dexterindustries.com/BrickPi/) and returns a promise.
 The serial communication timeout has a default value of 10 ms.
 
 ```javascript
-brick.initAsync(10).then(function () {
+brick.init(10).then(function () {
     // ...
 }).catch(handleError);
 ```
 
-### brick.updateAsync([maxRetries])
+### brick.update([maxRetries])
 
 Updates all brick values via the serial connection and returns a promise.
 Retries the update if a serial communication timeout occurs.
@@ -64,7 +64,7 @@ Throws an error if the number of maximum retries is exceeded.
 You should call this method periodically with a delay of 10 ms.
 
 ```javascript
-brick.updateAsync(2).then(function () {
+brick.update(2).then(function () {
     // ...
 }).catch(handleError);
 ```
