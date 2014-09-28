@@ -49,9 +49,9 @@
     },
     "dependencies": {
         "es6-promise": "~1.0.0",
-        "promise-denodeify": "~1.0.0",
+        "promise-denodeify": "~1.1.0",
         "serialport": "~1.4.6",
-        "typesystem": "~1.2.2"
+        "typesystem": "~1.2.3"
     },
     "devDependencies": {
         "extended-assert": "~1.4.1",
