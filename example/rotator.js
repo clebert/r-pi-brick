@@ -2,13 +2,26 @@
 
 var brick = require('../lib/brick');
 
-var handleError = function (error) {
-    console.log('Error: ' + error.message);
-};
+brick.on('error', function (error) {
+    throw error;
+});
+
+brick.on('init', function () {
+    brick.setMotorEnabled(true, brick.MOTOR_PORT_A);
+    brick.setMotorEnabled(true, brick.MOTOR_PORT_B);
+
+    brick.setMotorPower(100, brick.MOTOR_PORT_A);
+    brick.setMotorPower(-100, brick.MOTOR_PORT_B);
+
+    setInterval(function () {
+        brick.setMotorPower(-brick.getMotorPower(brick.MOTOR_PORT_A), brick.MOTOR_PORT_A);
+        brick.setMotorPower(-brick.getMotorPower(brick.MOTOR_PORT_B), brick.MOTOR_PORT_B);
+    }, 5000);
+});
 
 var lastTime;
 
-var print = function () {
+brick.on('update', function () {
     var time = Date.now();
 
     if (!lastTime || (time - lastTime) >= 100) {
@@ -31,27 +44,6 @@ var print = function () {
 
         lastTime = time;
     }
-};
+});
 
-var update = function () {
-    brick.updateAsync(2).then(function () {
-        print();
-
-        setTimeout(update, 10);
-    }).catch(handleError);
-};
-
-brick.initAsync(10).then(function () {
-    brick.setMotorEnabled(true, brick.MOTOR_PORT_A);
-    brick.setMotorEnabled(true, brick.MOTOR_PORT_B);
-
-    brick.setMotorPower(100, brick.MOTOR_PORT_A);
-    brick.setMotorPower(-100, brick.MOTOR_PORT_B);
-
-    setInterval(function () {
-        brick.setMotorPower(-brick.getMotorPower(brick.MOTOR_PORT_A), brick.MOTOR_PORT_A);
-        brick.setMotorPower(-brick.getMotorPower(brick.MOTOR_PORT_B), brick.MOTOR_PORT_B);
-    }, 5000);
-
-    update();
-}).catch(handleError);
+brick.init(3);
