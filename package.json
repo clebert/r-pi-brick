@@ -50,16 +50,16 @@
     "dependencies": {
         "es6-promise": "~1.0.0",
         "serialport": "~1.4.6",
-        "typesystem": "~1.2.1"
+        "typesystem": "~1.2.2"
     },
     "devDependencies": {
-        "extended-assert": "~1.4.0",
+        "extended-assert": "~1.4.1",
         "grunt": "~0.4.5",
         "grunt-contrib-jshint": "~0.10.0",
         "grunt-bumpup": "~0.6.1",
         "grunt-cli": "~0.1.13",
         "grunt-mocha-cov": "~0.3.0",
-        "grunt-module": "~1.0.0",
-        "mocha-cov-reporter": "~1.0.0"
+        "grunt-module": "~1.0.1",
+        "mocha-cov-reporter": "~1.0.1"
     }
 }
