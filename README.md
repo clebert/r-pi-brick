@@ -58,13 +58,13 @@ brick.init(10).then(function () {
 
 Updates all brick values via the serial connection and returns a promise.
 Retries the update if a serial communication timeout occurs.
-The number of maximum retries has a default value of 2.
+The number of maximum retries has a default value of 3.
 Throws an error if the number of maximum retries is exceeded.
 
 You should call this method periodically with a delay of 10 ms.
 
 ```javascript
-brick.update(2).then(function () {
+brick.update(3).then(function () {
     // ...
 }).catch(handleError);
 ```
