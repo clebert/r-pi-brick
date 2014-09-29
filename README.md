@@ -176,6 +176,8 @@ This port should be used together with port C.
 
 ## Example
 
+This example rotates two motors A and B in opposite directions.
+
 ```sh
 node node_modules/r-pi-brick/example/rotator.js
 ```
