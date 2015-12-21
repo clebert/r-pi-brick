@@ -1,16 +1,8 @@
+**THIS PROJECT IS NO LONGER MAINTAINED by clebert.**
+
 # r-pi-brick
 
-> A Node.js API for the [BrickPi](http://www.dexterindustries.com/BrickPi/).
-
-[![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/clebert/r-pi-brick/master/LICENSE)
-[![npm](http://img.shields.io/npm/v/r-pi-brick.svg?style=flat)](https://www.npmjs.org/package/r-pi-brick)
-[![downloads](http://img.shields.io/npm/dm/r-pi-brick.svg?style=flat)](https://www.npmjs.org/package/r-pi-brick)
-
-[![build](http://img.shields.io/travis/clebert/r-pi-brick/master.svg?style=flat)](https://travis-ci.org/clebert/r-pi-brick)
-[![coverage](http://img.shields.io/coveralls/clebert/r-pi-brick/master.svg?style=flat)](https://coveralls.io/r/clebert/r-pi-brick)
-[![code climate](http://img.shields.io/codeclimate/github/clebert/r-pi-brick.svg?style=flat)](https://codeclimate.com/github/clebert/r-pi-brick)
-[![dependencies](http://img.shields.io/david/clebert/r-pi-brick.svg?style=flat)](https://david-dm.org/clebert/r-pi-brick#info=dependencies&view=table)
-[![devDependencies](http://img.shields.io/david/dev/clebert/r-pi-brick.svg?style=flat)](https://david-dm.org/clebert/r-pi-brick#info=devDependencies&view=table)
+> [Deprecated] A Node.js API for the [BrickPi](http://www.dexterindustries.com/BrickPi/).
 
 ## Getting Started
 
